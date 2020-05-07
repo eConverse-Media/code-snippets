@@ -1,0 +1,14 @@
+#Logo {
+    float: left;
+}
+#MPheader > .row:first-child {
+    float: right;
+}
+.skiplinkholder a, .skiplinkholder a:link, .skiplinkholder a:visited {
+    left: -500%;
+	top: -250px;
+}
+.skiplinkholder a:focus, .skiplinkholder a:active {
+    left: 0;
+	top: 0;
+}

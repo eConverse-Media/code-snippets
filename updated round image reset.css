@@ -1,0 +1,41 @@
+/* Circular Profile Picture Reset */
+
+.Welcome .imgButton.btn,
+a[id*='ProfileImage']:not([id*='NameLink']):not([id*='ManageDropDown']),
+a[id*='UserImageDisplay'],
+a[id*='Contacts_PictureLink'],
+a[id*='lnkDisplay'],
+a[id*='Welcome_Details_ProfileLink'],
+.list-group-item-image,
+a[title='User Name Image'],
+a[oldtitle='User Name Image'],
+.hl.paged-list .hl-contact .profile-img img,
+.member-dashboard-img a,
+.dashboard-col-3 ul li .col-sm-2 a,
+.HLEngagement .Picture a,
+td.ProfilePic>a {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background-color: #d8d9db;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+}
+
+
+/* Settings > Members */
+
+.hl.paged-list .hl-contact .profile-img img {
+    max-height: 100%;
+}
+
+
+/* Settings > Moderation > Items in Moderation Reset */
+
+table.table-condensed a[id*='lnkDisplay'] {
+    width: unset;
+    height: unset;
+}

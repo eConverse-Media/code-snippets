@@ -5,6 +5,6 @@ function topOfPage() {
 }
 
 function scrollToLocation(val) {
-	var location = $(val).offset().top - 88; //This is to accomodate an 88px high header
+	var location = $(val).offset().top; //To accommodate a header, subtract the header height
 	$('body,html').animate({scrollTop: location}, 500);
 }

@@ -5,7 +5,7 @@ $(function() {
         $(this).next(".accordion-text").andSelf().wrapAll("<div class='accordion-wrap' />");
     });
     
-    $('.accordion-heading').on('click', function() {
+    $('.accordion-heading button').on('click', function() {
         var items = [];
         $('.accordion-wrap').each(function (i, item) {
             items.push(item);

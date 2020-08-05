@@ -4,11 +4,13 @@ function handleAjaxCall(self) {
     // handle image 
 
     var imgContainer = '<div class="img-container loading" />';
-    $(self).prepend(imgContainer);
+    $(self).wrapInner('<div class="text-container" />');
+    $(self).append(imgContainer);
     $.ajax({
         url: href,
         dataType: 'html',
-        success: success
+        success: success,
+        error: removeLoading
     });
     
     function success(resp) {
@@ -18,8 +20,12 @@ function handleAjaxCall(self) {
         if (!!src) {
             var url = "url('" + src + "')";
             $(self).find('.img-container').css('background-image', url);
-            $(self).find('.img-container').removeClass('loading');
         }
-            
+        
+        removeLoading();
+    }
+
+    function removeLoading() {
+        $(self).find('.img-container').removeClass('loading');
     }
 }

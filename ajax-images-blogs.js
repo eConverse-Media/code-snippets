@@ -5,7 +5,7 @@ function handleAjaxCall(self) {
 
     var imgContainer = '<div class="img-container loading" />';
     $(self).wrapInner('<div class="text-container" />');
-    $(self).append(imgContainer);
+    $(self).prepend(imgContainer);
     $.ajax({
         url: href,
         dataType: 'html',

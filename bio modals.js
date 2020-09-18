@@ -1,5 +1,5 @@
 $(function () {
-	$('#MPOuter').addClass('has-modal');
+	$('body').addClass('has-modal');
 	$('.team').each(function () {
 		var self = $(this),
 			classList = $(self).attr('class').split(' '),
@@ -17,10 +17,12 @@ $(function () {
         $(bioImage).prependTo(bio);
         $(bioImage).wrap('<div class="bio-image" />');
         $(position).clone().prependTo($(bio).find('.bio-text'));
-        $(name).clone().prependTo($(bio).find('.bio-text'));
-	
+		$(name).clone().prependTo($(bio).find('.bio-text'));
 			
 		$(self).find('.HtmlContent').append(link);
+		$(self).find('.HtmlContent').wrapInner('<div class="text-container" />');
+		$(self).find('img').prependTo($(self).find('.HtmlContent'));
+		$(self).find('img').wrap('<div class="img-container" />');
 	});
 	
 	$('.bio').prepend('<button type="button" onclick="closeModal();" class="close-modal"></button>');
@@ -40,10 +42,10 @@ $(function () {
 function openModal(val) {
 	var klass = '.bio.' + val;
 	$(klass).addClass('open');
-	$('#MPOuter').addClass('modal-open');
+	$('body').addClass('modal-open');
 }
 
 function closeModal() {
 	$('.bio').removeClass('open');
-	$('#MPOuter').removeClass('modal-open');
+	$('body').removeClass('modal-open');
 }

@@ -1,11 +1,13 @@
-function handleAjaxCall(self) {
+function handleAjaxCall(self, asBackground) {
     var href = $(self).find('h3 a').attr('href');
 
     // handle image 
 
-    var imgContainer = '<div class="img-container loading" />';
-    $(self).wrapInner('<div class="text-container" />');
-    $(self).prepend(imgContainer);
+    if (!asBackground) {
+        var imgContainer = '<div class="img-container loading" />';
+        $(self).wrapInner('<div class="text-container" />');
+        $(self).prepend(imgContainer);
+    }
     $.ajax({
         url: href,
         dataType: 'html',
@@ -19,7 +21,11 @@ function handleAjaxCall(self) {
 
         if (!!src) {
             var url = "url('" + src + "')";
-            $(self).find('.img-container').css('background-image', url);
+            if (asBackground) {
+                $(self).css('background-image', url);
+            } else {
+                $(self).find('.img-container').css('background-image', url);
+            }
         }
         
         removeLoading();

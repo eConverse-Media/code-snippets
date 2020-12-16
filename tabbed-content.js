@@ -35,7 +35,7 @@ function handleContentTabs() {
             $(navTabs).append('<li role="presentation"><a href="#tab-' + counter + '" aria-controls="all" role="tab" data-toggle="tab">FIRST TAB</a></li>');
 
             // Get tab title without additional add button text
-            var tabTitle = $(this).find('.heading h2:first-of-type:not(a[id*="Add"]),  > h2:not(a[id*="Add"])').clone().children().remove().end().text();
+            var tabTitle = $(this).find('.heading h2:first-of-type:not(a[id*="Add"]),  > h2:not(a[id*="Add"]), h2[id*="TitleText"]').clone().children().remove().end().text();
             // Replace FIRST TAB placeholder text with tab content item title
             $(this).find($('.nav-tabs a[href="#tab-' + counter + '"]').text(tabTitle));
             // Increase counter by 1 for next iteration of tabs content item id and href

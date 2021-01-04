@@ -1,0 +1,141 @@
+
+/* Image CTA */
+
+.image-left,
+.image-right {
+	position: relative;
+}
+
+.image-left h3,
+.image-right h3 {
+	color: #333;
+}
+
+.image-left .HtmlContent,
+.image-right .HtmlContent {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 80px;
+}
+
+.image-left .HtmlContent > div:first-of-type,
+.image-right .HtmlContent > div:last-of-type {
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.image-left .HtmlContent > div:first-of-type {
+	padding: 200px 15px;
+	flex-basis: 50%;
+}
+
+.image-left .HtmlContent > div:last-of-type {
+	padding: 50px 0px 50px 50px;
+	flex-basis: 50%;
+	align-self: center;
+}
+
+.image-left .HtmlContent > div:last-of-type p:first-of-type {
+	font-size: 18px;
+	line-height: 26px;
+	margin-top: 23px;
+	/* color: #f3f7f9; */
+}
+
+.image-left .HtmlContent > div:last-of-type p {
+	margin: 0;
+}
+
+.image-left .HtmlContent > div:last-of-type em a {
+	margin-top: 25px;
+}
+
+.image-left h2 {
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 600;
+}
+
+.image-right .HtmlContent > div:first-of-type {
+	padding: 50px 40px 50px 0px;
+	flex-basis: 50%;
+	align-self: center;
+}
+
+.image-right .HtmlContent > div:last-of-type {
+	padding: 200px 15px;
+	flex-basis: 50%;
+	z-index: 10;
+}
+
+
+.image-right.make-buttons em a {
+	margin-top: 25px;
+}
+
+.image-right.make-buttons em a {
+	margin-top: 25px;
+}
+
+.image-right h2 {
+	font-weight: 700;
+}
+
+.image-right h2,
+.image-left h2,
+.image-left p,
+.image-right p,
+.image-left {
+	/* color: white; */
+}
+
+.image-right p:first-of-type {
+	padding-top: 23px;
+	padding-bottom: 17px;
+	margin: 0;
+}
+
+.image-left h4 {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.05em;
+	margin-top: 27px;
+}
+
+.image-left {
+	position: relative;
+}
+
+/* .image-left .HtmlContent > div:first-of-type,
+.image-left .HtmlContent > div:last-of-type {
+	margin-top: -80px;
+	position: relative;
+	z-index: 5;
+} */
+
+
+@media (max-width: 991px) {
+	.image-right .HtmlContent, .image-left .HtmlContent {
+		flex-direction: column;
+	}
+
+	.image-left .HtmlContent > div:first-of-type, .image-left .HtmlContent > div:last-of-type {
+		margin-top: 0;
+	}
+}
+
+
+@media (max-width: 380px) {
+
+	.image-right .HtmlContent > div:first-of-type {
+		padding-right: 0 15px;
+	}
+
+	.image-left .HtmlContent > div:last-of-type {
+		padding: 0 15px ;
+	}
+
+}

@@ -14,6 +14,7 @@ $(function () {
 
             $.ajax({
                 url: url,
+                type: "GET",
                 datatype: 'json',
                 success: success,
                 headers: {

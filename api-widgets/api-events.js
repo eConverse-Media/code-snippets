@@ -4,9 +4,13 @@ $(function () {
         constructor() {
             super();
 
-            var url = 'https://api.connectedcommunity.org/api/v2.0/Events/GetUpcoming?maxRecords=10',
+            var url = 'https://api.connectedcommunity.org/api/v2.0/Events/GetUpcoming',
                 showImage = this.getAttribute('show-image'),
                 maxResults = this.getAttribute('max-results');
+
+            if (!!maxResults) {
+                url += '?maxRecords=' + maxResults;
+            }
 
             $.ajax({
                 url: url,
@@ -18,12 +22,10 @@ $(function () {
             });
 
             function success(resp) {
-                $('#MainCopy_ContentWrapper .section1').append('<div class="events-list" />');
-                var maxLength = !!maxResults ? maxResults : resp.length;
-                for (var i = 0; i < maxLength; i++) {
+                for (var i = 0; i < resp.length; i++) {
                     var currentElem;
-                    $('<div class="event-elem" />').appendTo('.events-list');
-                    currentElem = $('.events-list .event-elem:last-child');
+                    $('<div class="event-elem" />').appendTo('event-list');
+                    currentElem = $('event-list .event-elem:last-child');
                     if (!!resp[i].PictureUrl && showImage) {
                         $(currentElem).append('<img class="img-responsive" src="' + resp[i].PictureUrl + '"/>');
                     }

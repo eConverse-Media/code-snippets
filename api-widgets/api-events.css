@@ -1,0 +1,7 @@
+.events-list {
+    display: flex;
+}
+.event-elem {
+    flex-basis: 33.333333%;
+    padding: 15px;
+}

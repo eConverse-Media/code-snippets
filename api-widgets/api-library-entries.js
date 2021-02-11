@@ -28,7 +28,16 @@ $(function () {
                     $('<div class="library-entry" />').appendTo('library-entry-list');
                     currentElem = $('library-entry-list .library-entry:last-child');
 
-                    $(currentElem).append('<h3><a href="' + resp[i].LinkToLibraryDocument + '">' + resp[i].DocumentTitle + '</a></h3><h5><strong>By: </strong><a href=" ' + resp[i].CreatedByContact.LinkToProfile + '">' + resp[i].CreatedByContact.FirstName + ' ' + resp[i].CreatedByContact.LastName + '</a></h5><h5><strong>Date:</strong> ' + resp[i].CreatedOn + '</h5><div>' + resp[i].Description + '</div>');
+                    var date = new Date(resp[i].CreatedOn),
+                        dateTime = date.toLocaleTimeString(),
+                        dateDate;
+
+                    var dateFormat = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: 'numeric'});
+
+                    dateDate = dateFormat.format(date);
+                    var dateText = dateTime + ', ' + dateDate;
+
+                    $(currentElem).append('<h3><a href="' + resp[i].LinkToLibraryDocument + '">' + resp[i].DocumentTitle + '</a></h3><h5><strong>By: </strong><a href=" ' + resp[i].CreatedByContact.LinkToProfile + '">' + resp[i].CreatedByContact.FirstName + ' ' + resp[i].CreatedByContact.LastName + '</a></h5><h5><strong>Date:</strong> ' + dateText + '</h5><div>' + resp[i].Description + '</div>');
                 }
             }
 

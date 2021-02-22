@@ -1,0 +1,38 @@
+/*** accordions ***/
+.accordion-heading button {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0061B2; /* link colour */
+    background: #fff;
+    padding: 15px 10px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid #f4f4f4;
+    cursor: pointer;
+    transition: .3s;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.accordion-heading button:hover,
+.accordion-heading button:focus {
+    color: #333; /* link hover colour */
+    transition: .3s;
+}
+.accordion-heading button::before {
+    font-family: eConverse; /* change to appropriate kit/unicode */
+    content: '\f026';
+    margin-right: 10px;
+}
+.open .accordion-heading button::before {
+    font-family: eConverse; /* change to appropriate kit/unicode */
+    content: '\f027';
+}
+.accordion-text {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.accordion-wrap .ContentItemHtml, .accordion-wrap .ContentItemHtml:hover {
+    transition: none !important;
+}

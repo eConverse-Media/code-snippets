@@ -1,0 +1,59 @@
+.flyout-page {
+    overflow-x: hidden;
+}
+
+.flyout {
+    position: absolute;
+    width: 200px;
+    padding: 20px;
+    color: #ffffff;
+    background: #263137;
+    right: -200px;
+    top: 30px;
+    transition: .3s;
+    height: 200px;
+}
+
+.flyout.left {
+    left: -200px;
+    right: auto;
+}
+
+.flyout.open {
+    right: 0;
+}
+
+.flyout.left.open {
+    left: 0;
+    right: auto;
+}
+
+.flyout::before {
+    cursor: pointer;
+    position: absolute;
+    left: -50px;
+    width: 50px;
+    top: 0;
+    bottom: 0;
+    background: #263137;
+    color: #ffffff;
+    font-family: General;
+    content: '\f076';
+    text-align: center;
+    font-size: 24px;
+    line-height: 200px;
+}
+
+.flyout.left::before {
+    right: -50px;
+    left: auto;
+    content: '\f075';
+}
+
+.flyout.open::before {
+    content: '\f075';
+}
+
+.flyout.left.open::before {
+    content: '\f076';
+}

@@ -1,0 +1,21 @@
+.blog-images .HLRecentBlogs ul {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.blog-images .HLRecentBlogs ul li {
+    flex-basis: calc(33.333333333% - 30px);
+    margin: 15px;
+    padding: 0;
+    border-bottom: none;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.blog-images .HLRecentBlogs ul li .img-container {
+    height: 200px;
+    width: 100%;
+}
+.blog-images .HLRecentBlogs ul li .text-container {
+    padding: 15px;
+}

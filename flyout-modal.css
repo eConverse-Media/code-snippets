@@ -1,5 +1,10 @@
-.flyout-page {
+#MainCopy_ContentWrapper.flyout-page {
     overflow-x: hidden;
+    padding-bottom: 300px;
+}
+
+.flyout-text {
+    min-height: 250px;
 }
 
 .flyout {
@@ -12,6 +17,7 @@
     top: 30px;
     transition: .3s;
     height: 200px;
+    z-index: 20;
 }
 
 .flyout.left {

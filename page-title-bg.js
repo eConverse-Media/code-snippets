@@ -1,3 +1,3 @@
 $(function() {
-    handleBgImage($('.hero-bg'), $('#PageTitleH1'));
+    handleBgImage($('.page-title-bg'), $('#PageTitleH1'));
 });

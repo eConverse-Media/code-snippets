@@ -1,0 +1,25 @@
+.announcement-bar {
+    background: #0061B2;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+}
+.announcement-bar button {
+    border: none;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.announcement-bar button::before {
+    font-family: eConverse;
+    content: '\f020';
+}
+.announcement-bar p:last-of-type {
+    margin-bottom: 0;
+}

@@ -16,7 +16,7 @@ $(function() {
 
         profileImgSrc = $(profileImg).attr('src');
 
-        console.log(profileImgSrc);
+        // console.log(profileImgSrc);
 
         var dashboardImg = $('.dashboard-img.ContentUserControl div[id*="ProfileImage"] a[id*="ImageControl_lnkDisplay"] img')
 

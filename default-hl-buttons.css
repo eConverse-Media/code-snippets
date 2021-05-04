@@ -3,8 +3,7 @@
 .btn:not(.dropdown-toggle) {
 	white-space: normal;
 }
-.btn:not(.btn-secondary),
-.blue-card .btn.btn-secondary {
+.btn:not(.btn-secondary) {
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;

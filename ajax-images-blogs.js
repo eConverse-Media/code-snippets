@@ -26,6 +26,8 @@ function handleAjaxCall(self, asBackground) {
             } else {
                 $(self).find('.img-container').css('background-image', url);
             }
+        } else {
+            $(self).find('.img-container').addClass('no-ajax-image');
         }
         
         removeLoading();

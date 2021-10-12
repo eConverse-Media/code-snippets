@@ -14,4 +14,3 @@ $(function () {
 		$(this).find('img:first-of-type').hide();
     });
 });
-

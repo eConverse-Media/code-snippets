@@ -1,0 +1,30 @@
+body.ribbit .navbar-default .navbar-nav>li>a,
+body.ribbit .navbar-default .navbar-nav>.active>a, 
+body.ribbit .navbar-default .navbar-nav>.disabled>a {
+    padding: 5px 15px /* padding here */;
+}
+body.ribbit .navbar-default .navbar-nav>li>a span,
+body.ribbit .navbar-default .navbar-nav>.active>a span, 
+body.ribbit .navbar-default .navbar-nav>.disabled>a span {
+    color: #000 /* colour here */;
+
+}
+body.ribbit .navbar-default .navbar-nav>li>a:hover span, body.ribbit .navbar-default .navbar-nav>li>a:focus span,
+body.ribbit .navbar-default .navbar-nav>.active>a:hover span, body.ribbit .navbar-default .navbar-nav>.active>a:focus span,
+body.ribbit .navbar-default .navbar-nav>.disabled>a:hover span, body.ribbit .navbar-default .navbar-nav>.disabled>a:focus span,
+body.ribbit .navbar-default .navbar-nav>.open>a span, body.ribbit .navbar-default .navbar-nav>.open>a:hover span, body.ribbit .navbar-default .navbar-nav>.open>a:focus span,
+body.ribbit .navbar-default.navbar-nav>.dropdown>a.caret::before, body.ribbit .nav-tabs>li>a.caret::before, body.ribbit .caret::before {
+	color: #fff /* colour here */;
+}
+
+/* dropdowns */
+.navbar-nav>li>.dropdown-menu {
+    border: none;
+}
+body.ribbit #MPButtonBar .dropdown-menu li a,
+body.ribbit .dropdown-menu li a {
+    color: #000 /* colour here */;
+}
+body.ribbit #MPButtonBar .dropdown-menu>li>a:hover, body.ribbit #MPButtonBar .dropdown-menu>li>a:focus, body.ribbit #MPButtonBar .dropdown-menu li a:hover, body.ribbit #MPButtonBar .dropdown-menu .active>li>a:hover, body.ribbit #MPButtonBar .dropdown-menu>li>a:focus {
+    color: #fff /* hover colour here */;
+}

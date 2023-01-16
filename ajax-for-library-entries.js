@@ -1,4 +1,4 @@
-function libraryAjax(self, asBackground) {
+function handleLibraryAjax(self, asBackground) {
     var href = $(self).find('h3 a').attr('href');
 
     // handle image 

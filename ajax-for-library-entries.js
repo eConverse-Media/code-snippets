@@ -18,7 +18,6 @@ function libraryAjax(self, asBackground) {
     function success(resp) {
         var img = $(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type'),
             src = $(img).attr('src');
-            console.log(src);
 
         if (!!src) {
             var url = "url('" + src + "')";

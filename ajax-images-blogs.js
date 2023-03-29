@@ -16,8 +16,12 @@ function handleAjaxCall(self, asBackground) {
     });
     
     function success(resp) {
-        var img = $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type'),
-            src = $(img).attr('src');
+        var img = $(resp).find('.blogs-block .blog-featured-image-row img');
+            
+        if (!($(img).attr('src'))) {
+            img = $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type')
+        }
+        var src = $(img).attr('src');
 
         if (!!src) {
             var url = "url('" + src + "')";

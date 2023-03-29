@@ -5,7 +5,7 @@ function topOfPage() {
 }
 
 function scrollToLocation(val) {
-	var headerHeight = !!($('#MPOuterHeader').hasClass('stickyNav')) ? $('#MPOuterHeader').height() : 0;
+	var headerHeight = !!($('#MPOuterHeader').hasClass('stickyNav') || $('#NAV').hasClass('stickyNav')) ? $('#MPOuterHeader').outerHeight() : 0;
 	var location = $(val).offset().top - headerHeight; 
 	$('body,html').animate({scrollTop: location}, 500);
 }

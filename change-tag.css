@@ -1,0 +1,11 @@
+/* Change tags site wide includes activity feed, pre thrive widget tags, thrive widget tags and resource/library feed tags  */
+
+
+.feed-item-row .feed-badge.text-meta, 
+.tags-list a.label-search-tag, 
+body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag, 
+body.ribbit .tags-list a.label-search-tag,
+#MPOuterMost .HLLandingControl .content-tags a.label-search-tag,
+.tagit li {
+    
+}

@@ -16,8 +16,13 @@ function handleLibraryAjax(self, asBackground) {
     });
     
     function success(resp) {
-        var img = $(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type'),
-            src = $(img).attr('src');
+        var img = !!($(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type').attr('src')) ? $(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type') : $(resp).find('#gallery img');
+
+        if (!$(img).attr('src')) {
+            img = !!($(resp).find('.blogs-block .blog-featured-image-row img').attr('src')) ? $(resp).find('.blogs-block .blog-featured-image-row img') : $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type');
+        }
+
+        var src = $(img).attr('src');
 
         if (!!src) {
             var url = "url('" + src + "')";
@@ -26,18 +31,7 @@ function handleLibraryAjax(self, asBackground) {
             } else {
                 $(self).find('.img-container').css('background-image', url);
             }
-        }
-        else if (src = 'undefined') {
-            var img = $(resp).find('.blogs-block .blog-featured-image-row img'),
-            src = $(img).attr('src');
-            var url = "url('" + src + "')";
-            if (asBackground) {
-                $(self).css('background-image', url);
-            } else {
-                $(self).find('.img-container').css('background-image', url);
-            }
-        }
-        else {
+        } else {
             $(self).find('.img-container').addClass('no-ajax-image');
         }
         

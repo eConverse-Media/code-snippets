@@ -1,5 +1,5 @@
 /*
-Script to insert and redirect to search page injecting search value into the URL
+Script to insert input and redirect to search page injecting search value into the URL
 
 */
 
